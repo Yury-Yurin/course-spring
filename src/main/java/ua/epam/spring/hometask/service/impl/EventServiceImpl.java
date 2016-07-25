@@ -6,12 +6,14 @@ import ua.epam.spring.hometask.service.EventService;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import java.util.Collection;
+import java.util.HashMap;
 
 /**
  * Created by yury on 7/25/16.
  */
 public class EventServiceImpl implements EventService {
 
+    HashMap<Long,Event> events = new HashMap<>();
 
     @Nullable
     @Override
