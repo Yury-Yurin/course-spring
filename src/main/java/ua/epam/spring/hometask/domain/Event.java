@@ -181,9 +181,10 @@ public class Event extends DomainObject {
     public Event() {
 
     }
-    public Event(String name,double basePrice) {
+    public Event(String name,double basePrice, EventRating rating) {
         this.name = name;
         this.basePrice = basePrice;
+        this.rating = rating;
     }
 
     @Override

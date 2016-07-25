@@ -60,4 +60,9 @@ public class UserServiceImpl extends ClassPathXmlApplicationContext implements U
         return users.values();
     }
 
+    public boolean isRegistered(String email) {
+        if(getUserByEmail(email)!=null) return true;
+        return false;
+    }
+
 }

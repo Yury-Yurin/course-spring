@@ -21,6 +21,9 @@ public class DiscountServiceImpl implements DiscountService {
 
     @Override
     public byte getDiscount(@Nullable User user, @Nonnull Event event, @Nonnull LocalDateTime airDateTime, long numberOfTickets) {
+        if(365*2-user.getBirthDate().getDayOfYear()+airDateTime.getDayOfYear() <=5 ) return (byte) DiscountStrategy.calcDiscount("birthday");
+        if(event.getAirDates().contains(airDateTime)) return (byte) DiscountStrategy.calcDiscount("eventOnHolidays");
+        if(numberOfTickets == (long)10) return (byte) DiscountStrategy.calcDiscount("10tickets");
         return 0;
     }
 }

@@ -17,12 +17,9 @@
     </bean>
 
     <util:list id="strategies" value-type="java.lang.String">
-        <value>birthday</value>
+        <value>birthDate</value>
         <value>10tickets</value>
         <value>eventOnHolidays</value>
     </util:list>
-
-
-
 
 </beans>
