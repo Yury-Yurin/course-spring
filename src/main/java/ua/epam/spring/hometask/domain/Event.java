@@ -178,6 +178,14 @@ public class Event extends DomainObject {
         this.auditoriums = auditoriums;
     }
 
+    public Event() {
+
+    }
+    public Event(String name,double basePrice) {
+        this.name = name;
+        this.basePrice = basePrice;
+    }
+
     @Override
     public int hashCode() {
         return Objects.hash(name);

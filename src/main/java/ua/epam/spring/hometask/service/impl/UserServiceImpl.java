@@ -20,7 +20,7 @@ import java.util.Map;
  */
 public class UserServiceImpl extends ClassPathXmlApplicationContext implements UserService {
 
-    public static Long countId = new Long(0);
+    private Long countId = new Long(0);
     private HashMap<Long,User> users = new HashMap<>();
 
     @Nullable
@@ -43,7 +43,7 @@ public class UserServiceImpl extends ClassPathXmlApplicationContext implements U
 
     @Override
     public void remove(@Nonnull User object) {
-        for(int i=0;i<users.size(); i++) {
+        for(Long i = new Long(0); i<users.size(); i++) {
             if(users.get(i).equals(object))
                 users.remove(i);
         }
