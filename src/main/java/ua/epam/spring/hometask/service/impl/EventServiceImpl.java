@@ -39,6 +39,6 @@ public class EventServiceImpl implements EventService {
     @Nonnull
     @Override
     public Collection<Event> getAll() {
-        return null;
+        return events.values();
     }
 }
